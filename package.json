@@ -1,0 +1,27 @@
+{
+  "name": "personal-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "preinstall": "node .vscode/install.vsix.js",
+    "commit": "git pull && gitmoji -c",
+    "dev": "vite --host --port=3000",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@liuhuiyuan/eslint-config": "workspace:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-define-config": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
+    "gitmoji-cli": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "author": "刘汇源",
+  "license": "ISC"
+}

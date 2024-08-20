@@ -1,0 +1,5 @@
+{
+  "default": true,
+  "MD013": false, // 关闭行长度限制
+  "MD033": false // 允许内联 HTML
+}
