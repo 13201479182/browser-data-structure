@@ -11,7 +11,6 @@ module.exports = {
             readonly: 'array',
         },
     ],
-    '@typescript-eslint/ban-types': 2,
     '@typescript-eslint/class-literal-property-style': [2, 'fields'],
     '@typescript-eslint/consistent-generic-constructors': [2, 'constructor'],
     '@typescript-eslint/consistent-indexed-object-style': [2, 'index-signature'],

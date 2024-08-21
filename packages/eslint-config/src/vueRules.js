@@ -3,8 +3,7 @@
  * 针对vue语法规则
  */
 module.exports = {
-    'vue/singleline-html-element-content-newline': 0,
-    'vue/html-indent': 0,
+    'vue/singleline-html-element-content-newline': 1,
     'vue/multi-word-component-names': 0,
     'vue/html-indent': [
         1,

@@ -8,19 +8,17 @@
     "commit": "git pull && gitmoji -c",
     "dev": "vite --host --port=3000",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@liuhuiyuan/eslint-config": "workspace:",
-    "eslint": "catalog:",
-    "eslint-config-prettier": "catalog:",
-    "eslint-define-config": "catalog:",
-    "eslint-plugin-prettier": "catalog:",
-    "gitmoji-cli": "catalog:",
-    "prettier": "catalog:",
-    "typescript": "catalog:",
     "vite": "catalog:",
-    "vue-tsc": "catalog:"
+    "typescript": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "vue-tsc": "catalog:",
+    "gitmoji-cli": "catalog:"
   },
   "author": "刘汇源",
   "license": "ISC"

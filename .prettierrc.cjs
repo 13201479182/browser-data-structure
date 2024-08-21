@@ -6,6 +6,7 @@ module.exports = {
     trailingComma: 'all',
     bracketSpacing: true,
     arrowParens: 'always',
-    singleAttributePerLine: false,
+    singleAttributePerLine: true,
     bracketSameLine: true,
+    vueIndentScriptAndStyle: true,
 };
