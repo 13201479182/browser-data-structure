@@ -9,4 +9,5 @@ module.exports = {
     singleAttributePerLine: true,
     bracketSameLine: true,
     vueIndentScriptAndStyle: true,
+    experimentalTernaries: true,
 };

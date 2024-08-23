@@ -1,0 +1,15 @@
+{
+  "name": "@liuhuiyuan/typescript-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "dependencies": {
+    "@types/node": "catalog:typescript-config"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

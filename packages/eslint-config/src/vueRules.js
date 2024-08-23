@@ -4,7 +4,7 @@
  */
 module.exports = {
     'vue/singleline-html-element-content-newline': 1,
-    'vue/multi-word-component-names': 0,
+    'vue/multi-word-component-names': 1,
     'vue/html-indent': [
         1,
         4,

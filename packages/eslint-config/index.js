@@ -12,6 +12,7 @@ module.exports = defineFlatConfig([
     ...require('eslint-plugin-vue').configs['flat/essential'],
 
     {
+        name: '@liuhuiyuan: js&cjs-rules',
         files: ['**/*.{js,cjs}'],
         languageOptions: {
             ecmaVersion: 'latest',
@@ -20,7 +21,9 @@ module.exports = defineFlatConfig([
         rules: jsRules,
     },
     {
+        name: '@liuhuiyuan: ts-rules',
         files: ['**/*.ts'],
+        ignores: ['**/*.d.ts'],
         languageOptions: {
             parser: tsParser,
         },
@@ -30,6 +33,7 @@ module.exports = defineFlatConfig([
         },
     },
     {
+        name: '@liuhuiyuan: vue-rules',
         files: ['**/*.vue'],
         languageOptions: {
             parser: require('vue-eslint-parser'),
@@ -41,5 +45,18 @@ module.exports = defineFlatConfig([
         plugins: {
             '@typescript-eslint': tsPlugin,
         },
+    },
+    {
+        // 全局配置统一忽略目录
+        name: '@liuhuiyuan: global-ignore',
+        ignores: [
+            '**/{.vscode,build,dist}/*',
+            '**/node_modules/*',
+            '**/public/*',
+            '**/coverage/*',
+            '**/.prettierrc.cjs',
+            '**/eslint.config.cjs',
+            '**/vite.config.ts',
+        ],
     },
 ]);

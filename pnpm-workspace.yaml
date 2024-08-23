@@ -1,6 +1,5 @@
 packages:
     - packages/*
-    - docs/*
 
 catalog:
     vite: ^5.3.4
@@ -16,4 +15,7 @@ catalogs:
         eslint-plugin-prettier: ^5.2.1
         eslint-config-prettier: ^9.1.0
         typescript-eslint: ^8.2.0
-        eslint-plugin-vue: '^9.27.0'
+        eslint-plugin-vue: ^9.27.0
+        '@eslint/config-inspector': 0.5.4
+    typescript-config:
+        '@types/node': ^22.5.0

@@ -9,16 +9,19 @@
     "dev": "vite --host --port=3000",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "eslint:check": "pnpm --filter eslint-config run check",
+    "eslint:report": "pnpm --filter eslint-config run report",
     "lint": "eslint ."
   },
   "devDependencies": {
     "@liuhuiyuan/eslint-config": "workspace:",
-    "vite": "catalog:",
-    "typescript": "catalog:",
+    "@liuhuiyuan/typescript-config": "workspace:",
+    "gitmoji-cli": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "vue-tsc": "catalog:",
-    "gitmoji-cli": "catalog:"
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
   },
   "author": "刘汇源",
   "license": "ISC"

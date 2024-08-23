@@ -2,21 +2,24 @@ const eslintConfig = require('@liuhuiyuan/eslint-config');
 
 /**
  * 通过注释在文件内屏蔽规则
- *   /* eslint-disable no-alert *\/
- *   /* eslint-disable-line no-alert *\/
  *
- * 配置参考(https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file)
+ * prettier(https://prettier.nodejs.cn/docs/en/ignore.html)
+ * eslint(https://eslint.org/docs/latest/use/configure/ignore)
  */
 module.exports = [
     ...eslintConfig,
 
-    // 修改全局配置
+    // 适用当前项目配置,规则优先级最高
     {
-        // ignores: ['packages/eslint-config'],
+        name: '@project: config',
+        // prettier-ignore
+        ignores: [
+            '**/packages/eslint-config/*'
+        ],
     },
-
-    // 修改指定规则
     {
-        // 'no-unused-vars': 0,
+        name: '@project: rules',
+        // 修改指定规则
+        rules: {},
     },
 ];
