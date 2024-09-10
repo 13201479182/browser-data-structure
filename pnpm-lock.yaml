@@ -24,29 +24,6 @@ catalogs:
     vue-tsc:
       specifier: ^2.0.29
       version: 2.0.29
-  eslint-config:
-    '@eslint/config-inspector':
-      specifier: 0.5.4
-      version: 0.5.4
-    eslint-config-prettier:
-      specifier: ^9.1.0
-      version: 9.1.0
-    eslint-define-config:
-      specifier: ^2.1.0
-      version: 2.1.0
-    eslint-plugin-prettier:
-      specifier: ^5.2.1
-      version: 5.2.1
-    eslint-plugin-vue:
-      specifier: ^9.27.0
-      version: 9.27.0
-    typescript-eslint:
-      specifier: ^8.2.0
-      version: 8.2.0
-  typescript-config:
-    '@types/node':
-      specifier: ^22.5.0
-      version: 22.5.0
 
 importers:
 

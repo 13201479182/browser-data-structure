@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "preinstall": "node .vscode/install.vsix.js",
-    "commit": "git pull && gitmoji -c",
+    "commit": "git pull && git add . && gitmoji -c && git push",
     "dev": "vite --host --port=3000",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
@@ -16,8 +16,8 @@
   "devDependencies": {
     "@liuhuiyuan/eslint-config": "workspace:",
     "@liuhuiyuan/typescript-config": "workspace:",
-    "gitmoji-cli": "catalog:",
     "eslint": "catalog:",
+    "gitmoji-cli": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",

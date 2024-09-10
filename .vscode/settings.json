@@ -1,0 +1,29 @@
+{
+    "npm.packageManager": "pnpm",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true,
+        },
+    },
+    "files.exclude": {
+        ".vscode/extensions.json": true,
+        ".vscode/install.vsix.js": true,
+        ".vscode/vue.json": true,
+        "**/node_modules": true,
+        "**/.gitignore": true,
+        "**/.editorconfig": true,
+        "**/.prettierrc.cjs": true,
+        "**/.prettierignore": true,
+        "**/.markdownlint.jsonc": true,
+        "**/.npmrc": true,
+        "**/eslint.config.cjs": true,
+        "**/pnpm-lock.yaml": true,
+    }
+}

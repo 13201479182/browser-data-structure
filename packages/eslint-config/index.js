@@ -49,14 +49,6 @@ module.exports = defineFlatConfig([
     {
         // 全局配置统一忽略目录
         name: '@liuhuiyuan: global-ignore',
-        ignores: [
-            '**/{.vscode,build,dist}/*',
-            '**/node_modules/*',
-            '**/public/*',
-            '**/coverage/*',
-            '**/.prettierrc.cjs',
-            '**/eslint.config.cjs',
-            '**/vite.config.ts',
-        ],
+        ignores: ['**/{.vscode,build,dist}/*', '**/node_modules/*', '**/public/*', '**/coverage/*'],
     },
 ]);

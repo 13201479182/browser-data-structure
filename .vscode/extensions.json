@@ -21,6 +21,7 @@
         "bierner.markdown-footnotes",
         "bierner.markdown-mermaid",
         "mervin.markdown-formatter",
-        "davidanson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "lokalise.i18n-ally"
     ]
 }

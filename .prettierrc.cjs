@@ -8,6 +8,6 @@ module.exports = {
     arrowParens: 'always',
     singleAttributePerLine: true,
     bracketSameLine: true,
-    vueIndentScriptAndStyle: true,
+    vueIndentScriptAndStyle: false,
     experimentalTernaries: true,
 };
