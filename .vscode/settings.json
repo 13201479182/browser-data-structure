@@ -16,7 +16,7 @@
         ".vscode/extensions.json": true,
         ".vscode/install.vsix.js": true,
         ".vscode/vue.json": true,
-        "**/node_modules": true,
+        // "**/node_modules": true,
         "**/.gitignore": true,
         "**/.editorconfig": true,
         "**/.prettierrc.cjs": true,
@@ -25,5 +25,6 @@
         "**/.npmrc": true,
         "**/eslint.config.cjs": true,
         "**/pnpm-lock.yaml": true,
-    }
+    },
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }

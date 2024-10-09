@@ -1,15 +1,15 @@
 {
-  "name": "@liuhuiyuan/typescript-config",
+  "name": "@hyuan/typescript-config",
   "version": "1.0.0",
   "description": "",
-  "main": "tsconfig.json",
-  "files": [
-    "tsconfig.json"
-  ],
-  "dependencies": {
-    "@types/node": "catalog:typescript-config"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "./src/tsconfig.web.json",
+  "exports": {
+    "./web": "./src/tsconfig.web.json",
+    "./vitest": "./src/tsconfig.vitest.json",
+    "./node": "./src/tsconfig.node.json",
+    "./lib": "./src/tsconfig.lib.json"
+  }
 }

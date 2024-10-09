@@ -66,7 +66,7 @@ module.exports = {
     'prefer-rest-params': 2,
 
     'no-redeclare': 2,
-    'no-unused-vars': 2,
+    'no-unused-vars': 0,
     'no-use-before-define': 2,
     'no-shadow': 2,
 };

@@ -14,8 +14,8 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@liuhuiyuan/eslint-config": "workspace:",
-    "@liuhuiyuan/typescript-config": "workspace:",
+    "@hyuan/eslint-config": "workspace:",
+    "@hyuan/typescript-config": "workspace:",
     "eslint": "catalog:",
     "gitmoji-cli": "catalog:",
     "prettier": "catalog:",
