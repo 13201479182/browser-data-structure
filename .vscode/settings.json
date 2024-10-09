@@ -16,7 +16,7 @@
         ".vscode/extensions.json": true,
         ".vscode/install.vsix.js": true,
         ".vscode/vue.json": true,
-        // "**/node_modules": true,
+        "**/node_modules": false,
         "**/.gitignore": true,
         "**/.editorconfig": true,
         "**/.prettierrc.cjs": true,
