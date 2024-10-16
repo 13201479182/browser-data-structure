@@ -4,8 +4,9 @@ packages:
 
 catalog:
     vite: ^5.3.4
+    vue: ^3.5.11
+    vue-tsc: ^2.1.6
     typescript: ^5.5.4
-    vue-tsc: ^2.0.29
     eslint: ^9.9.0
     prettier: ^3.3.3
     gitmoji-cli: ^9.4.0
@@ -18,3 +19,9 @@ catalogs:
         typescript-eslint: ^8.2.0
         eslint-plugin-vue: ^9.27.0
         '@eslint/config-inspector': 0.5.4
+
+    vue-press:
+        vuepress: 2.0.0-rc.17
+        '@vuepress/bundler-vite': 2.0.0-rc.17
+        vuepress-theme-hope: 2.0.0-rc.58
+        vuepress-plugin-search-pro: 2.0.0-rc.57

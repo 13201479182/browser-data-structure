@@ -1,0 +1,20 @@
+{
+  "name": "@hyuan/docs",
+  "version": "0.0.1",
+  "description": "A VuePress project",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vuepress dev src -c=./src/.vuepress/server.ts --clean-cache",
+    "docs:build": "vuepress build src -c=./src/.vuepress/server.ts --clean-cache",
+    "docs:preview": "vite preview --outDir=dist"
+  },
+  "devDependencies": {
+    "vite": "catalog:",
+    "vue": "catalog:",
+    "vuepress": "catalog:vue-press",
+    "vuepress-theme-hope": "catalog:vue-press",
+    "vuepress-plugin-search-pro": "catalog:vue-press",
+    "@vuepress/bundler-vite": "catalog:vue-press"
+  }
+}

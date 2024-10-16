@@ -12,7 +12,7 @@ module.exports = [
     // 适用当前项目配置,规则优先级最高
     {
         name: '@project: config',
-        ignores: ['./packages/eslint-config/*'],
+        ignores: ['packages/eslint-config'],
     },
     {
         name: '@project: rules',

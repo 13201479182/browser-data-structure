@@ -50,10 +50,12 @@ module.exports = defineFlatConfig([
         // 全局配置统一忽略目录
         name: '@hyuan: global-ignore',
         ignores: [
-            '**/{.vscode,build,dist,test}/*',
-            '**/node_modules/*',
-            '**/public/*',
-            '**/coverage/*',
+            '**/{.vscode,build,dist,test}',
+            '**/node_modules',
+            '**/public',
+            '**/coverage',
+            '**/.cache',
+            '**/.temp',
             '**/.prettierrc.{js,cjs,mjs}',
             '**/eslint.config.{js,cjs,mjs}',
         ],

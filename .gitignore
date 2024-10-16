@@ -7,11 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
 # Editor directories and files
 !.vscode/setting.json
 .idea
@@ -21,3 +16,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Porject
+coverage
+dist
+node_modules
+.cache
+.temp
+*.local

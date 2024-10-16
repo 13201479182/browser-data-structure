@@ -9,9 +9,12 @@
     "dev": "vite --host --port=3000",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "lint": "eslint .",
+    "docs:dev": "pnpm --filter docs run docs:dev",
+    "docs:build": "pnpm --filter docs run docs:build",
+    "docs:preview": "pnpm --filter docs run docs:preview",
     "eslint:check": "pnpm --filter eslint-config run check",
-    "eslint:report": "pnpm --filter eslint-config run report",
-    "lint": "eslint ."
+    "eslint:report": "pnpm --filter eslint-config run report"
   },
   "devDependencies": {
     "@hyuan/eslint-config": "workspace:",
@@ -24,5 +27,8 @@
     "vue-tsc": "catalog:"
   },
   "author": "刘汇源",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vuepress-plugin-search-pro": "2.0.0-rc.57"
+  }
 }

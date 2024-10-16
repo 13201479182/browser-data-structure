@@ -1,19 +1,25 @@
 {
     "npm.packageManager": "pnpm",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[html]": {
-        "editor.formatOnSave": false
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.quickSuggestions": {
             "other": true,
             "comments": true,
             "strings": true,
         },
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
     },
     "files.exclude": {
         ".vscode/extensions.json": true,
@@ -28,6 +34,7 @@
         "**/.npmrc": true,
         "**/eslint.config.cjs": true,
         "**/pnpm-lock.yaml": true,
+        "**/.cache": true
     },
     "typescript.tsdk": "node_modules\\typescript\\lib"
 }
