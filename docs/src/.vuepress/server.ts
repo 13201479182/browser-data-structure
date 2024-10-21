@@ -6,6 +6,7 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import { githubURL, logoURL, logoName, default as Config } from './config/index';
 
 export default defineUserConfig({
+    base: '/private-project/',
     dest: './dist',
     public: './src/public',
 
