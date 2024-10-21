@@ -1,5 +1,5 @@
 ---
-permalink: /document/
+permalink: /pages/document/
 
 title: 文档
 icon: file-lines

@@ -7,7 +7,7 @@ export default defineClientConfig({
             const logo = document.querySelector('.vp-nav-logo');
             if (logo && logo.parentNode) {
                 logo.parentNode.addEventListener('click', function () {
-                    window.location.href = '/author/';
+                    window.location.href = '/pages/author/';
                 });
             }
         };
@@ -16,15 +16,12 @@ export default defineClientConfig({
     },
 
     enhance({ router, app }) {
-        // app.config.globalProperties.onMounted = () => {
-        //     console.log(1212);
-        // };
-        // router.beforeEach((to, from, next) => {
-        //     if (to.path === '/') {
-        //         next('/author');
-        //     } else {
-        //         next();
-        //     }
-        // });
+        router.beforeEach((to, from, next) => {
+            if (to.path === '/') {
+                next('/pages/home.html');
+            } else {
+                next();
+            }
+        });
     },
 });

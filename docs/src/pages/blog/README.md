@@ -1,5 +1,5 @@
 ---
-permalink: /blog/
+permalink: /pages/blog/
 
 title: 博客
 icon: blog

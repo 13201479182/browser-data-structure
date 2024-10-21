@@ -1,5 +1,5 @@
 ---
-permalink: /image/
+permalink: /pages/image/
 
 title: 图片
 icon: image

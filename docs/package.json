@@ -15,6 +15,7 @@
     "vuepress": "catalog:vue-press",
     "vuepress-theme-hope": "catalog:vue-press",
     "vuepress-plugin-search-pro": "catalog:vue-press",
+    "sass-embedded": "catalog:vue-press",
     "@vuepress/bundler-vite": "catalog:vue-press"
   }
 }

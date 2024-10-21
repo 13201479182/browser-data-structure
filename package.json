@@ -27,8 +27,5 @@
     "vue-tsc": "catalog:"
   },
   "author": "刘汇源",
-  "license": "ISC",
-  "dependencies": {
-    "vuepress-plugin-search-pro": "2.0.0-rc.57"
-  }
+  "license": "ISC"
 }

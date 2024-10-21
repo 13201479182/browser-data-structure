@@ -18,6 +18,7 @@ module.exports = {
         2,
         {
             assertionStyle: 'angle-bracket',
+            objectLiteralTypeAssertions: 'never',
         },
     ],
 };
