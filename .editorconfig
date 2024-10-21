@@ -7,7 +7,7 @@ indent_style = space
 insert_final_newline = true
 indent_size = 4
 
-[*.{json,jsonc,md,MD}] 
+[*.{json,jsonc,md,yml}] 
 indent_size = 2
 
 [{.vscode/**.json,tsconfig.json}] 
