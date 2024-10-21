@@ -2,32 +2,32 @@ import { NavbarOptions } from 'vuepress-theme-hope';
 
 export const navbarOptions: NavbarOptions = [
     {
-        link: '/pages/home.html',
+        link: '/home.html',
         text: '首页',
         icon: 'home',
     },
     {
-        link: '/pages/document/',
+        link: '/document/',
         text: '文档',
         icon: 'file-lines',
     },
     {
-        link: '/pages/blog/',
+        link: '/blog/',
         text: '博客',
         icon: 'blog',
     },
     {
-        link: '/pages/tool/',
+        link: '/tool/',
         text: '工具',
         icon: 'screwdriver-wrench',
     },
     {
-        link: '/pages/image/',
+        link: '/image/',
         text: '图片',
         icon: 'image',
     },
     {
-        link: '/pages/video/',
+        link: '/video/',
         text: '视频',
         icon: 'video',
     },

@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "preinstall": "node .vscode/install.vsix.js",
     "commit": "git pull && git add . && gitmoji -c && git push",
     "dev": "vite --host --port=3000",
     "build": "vue-tsc && vite build",

@@ -1,5 +1,5 @@
 ---
-permalink: /pages/tool/
+permalink: /tool/
 
 title: 工具
 icon: screwdriver-wrench

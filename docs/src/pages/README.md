@@ -1,5 +1,5 @@
 ---
-permalink: /pages/home.html
+permalink: /home.html
 
 home: true
 

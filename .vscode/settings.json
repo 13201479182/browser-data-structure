@@ -22,8 +22,8 @@
         "source.fixAll.eslint": "explicit"
     },
     "files.exclude": {
-        ".vscode/extensions.json": true,
-        ".vscode/install.vsix.js": true,
+        // ".vscode/extensions.json": true,
+        // ".vscode/install.vsix.js": true,
         ".vscode/vue.json": true,
         "**/node_modules": false,
         "**/.gitignore": true,

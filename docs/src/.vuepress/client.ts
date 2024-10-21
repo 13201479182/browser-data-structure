@@ -7,7 +7,7 @@ export default defineClientConfig({
             const logo = document.querySelector('.vp-nav-logo');
             if (logo && logo.parentNode) {
                 logo.parentNode.addEventListener('click', function () {
-                    window.location.href = '/pages/author/';
+                    window.location.href = 'author/';
                 });
             }
         };
@@ -18,7 +18,7 @@ export default defineClientConfig({
     enhance({ router, app }) {
         router.beforeEach((to, from, next) => {
             if (to.path === '/') {
-                next('/pages/home.html');
+                next('home.html');
             } else {
                 next();
             }

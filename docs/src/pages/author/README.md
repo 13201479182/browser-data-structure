@@ -1,5 +1,5 @@
 ---
-permalink: /pages/author/
+permalink: /author/
 
 home: true
 portfolio: true

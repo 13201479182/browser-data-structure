@@ -1,5 +1,5 @@
 ---
-permalink: /pages/video/
+permalink: /video/
 
 title: 视频
 icon: video
