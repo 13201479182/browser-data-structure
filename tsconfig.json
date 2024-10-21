@@ -1,9 +1,0 @@
-{
-    "extends": "@hyuan/typescript-config/web",
-    "include": [
-        "**/types/**/*.d.ts",
-        "src/**/*.d.ts",
-        "src/**/*.ts",
-        "src/**/*.vue",
-    ]
-}
