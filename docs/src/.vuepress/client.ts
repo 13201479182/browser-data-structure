@@ -7,7 +7,7 @@ export default defineClientConfig({
             const logo = document.querySelector('.vp-nav-logo');
             if (logo && logo.parentNode) {
                 logo.parentNode.addEventListener('click', function () {
-                    window.location.href = 'author/';
+                    window.location.href = '/author/';
                 });
             }
         };

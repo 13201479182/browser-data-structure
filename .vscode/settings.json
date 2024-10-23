@@ -26,5 +26,27 @@
         "**/pnpm-lock.yaml": true,
         "**/.cache": true
     },
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "color": "terminal.ansiBlue",
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd",
+            "color": "terminal.ansiRed"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "color": "terminal.ansiYellow",
+        }
+    }
 }
