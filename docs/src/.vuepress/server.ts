@@ -1,11 +1,14 @@
-import { resolve } from 'node:path';
+import type { SearchProCustomFieldOptions } from 'vuepress-plugin-search-pro';
 
 import { defineUserConfig } from 'vuepress/cli';
 import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
 
+import { resolve } from 'node:path';
 import config from '../../config.ts';
 import { navbar, sidebar } from './config';
+
+type Page = SearchProCustomFieldOptions['getter'] extends (arg: infer R) => any ? R : any;
 
 export default defineUserConfig({
     title: config.title,
@@ -36,11 +39,15 @@ export default defineUserConfig({
             blog: true,
             searchPro: {
                 hotKeys: [{ key: 'f', ctrl: true }],
-                indexContent: true,
+                indexContent: false,
                 customFields: [
                     {
-                        getter: (page) => page.path,
-                        formatter: 'path: docs/src/pages$content',
+                        getter: (page) => page.frontmatter.title,
+                        formatter: 'title: $content',
+                    },
+                    {
+                        getter: (page: Page) => <string>page.frontmatter.author,
+                        formatter: 'author: $content',
                     },
                 ],
             },

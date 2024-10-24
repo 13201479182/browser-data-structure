@@ -2,7 +2,7 @@ import { NavbarOptions } from 'vuepress-theme-hope';
 
 export const navbar: NavbarOptions = [
     {
-        link: '/home.html',
+        link: '/home/',
         text: '首页',
         icon: 'home',
     },

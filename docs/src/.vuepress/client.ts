@@ -18,7 +18,7 @@ export default defineClientConfig({
     enhance({ router, app }) {
         router.beforeEach((to, from, next) => {
             if (to.path === '/') {
-                next('home.html');
+                next('/home/');
             } else {
                 next();
             }
