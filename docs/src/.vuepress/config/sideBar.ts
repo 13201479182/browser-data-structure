@@ -1,6 +1,6 @@
 import { SidebarOptions } from 'vuepress-theme-hope';
 
-export const sidebarOptions: SidebarOptions = {
+export const sidebar: SidebarOptions = {
     '/document/': [
         {
             text: '博客',

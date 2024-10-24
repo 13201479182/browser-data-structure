@@ -7,7 +7,7 @@ portfolio: true
 title: Portfolio Home
 icon: home
 name: Conan Edogawa
-avatar: /image/avatar.png
+avatar: /image/author/avatar.png
 
 titles:
   - Genius young detective

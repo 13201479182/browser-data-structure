@@ -1,9 +1,2 @@
-import { navbarOptions } from './navbarOptions';
-import { sidebarOptions } from './sidebarOptions';
-import { searchProOptions } from './searchProOptions';
-
-export default {
-    navbarOptions,
-    sidebarOptions,
-    searchProOptions,
-};
+export { navbar } from './navBar';
+export { sidebar } from './sideBar';

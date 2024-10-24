@@ -5,7 +5,7 @@ home: true
 
 title: 首页
 icon: home
-heroImage: /image/avatar.png
+heroImage: /image/home/logo.png
 heroText: VuePress Theme Hope
 tagline: 一个具有强大功能的 vuepress 主题✨
 
@@ -18,6 +18,12 @@ actions:
   - text: 指南
     icon: lightbulb
     link: /zh/guide/
+
+author:
+  - name: Mr.Hope
+    url: https://mister-hope.com
+    email: mister-hope@outlook.com
+  - name: Meteorlxy
 
 copyright: false
 footer: MIT Licensed | Copyright © 2019-present Mr.Hope

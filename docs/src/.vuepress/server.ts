@@ -1,36 +1,55 @@
+import { resolve } from 'node:path';
+
 import { defineUserConfig } from 'vuepress/cli';
+import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
 
-import { viteBundler } from '@vuepress/bundler-vite';
-
-import Config from './config/index';
+import config from '../../config.ts';
+import { navbar, sidebar } from './config';
 
 export default defineUserConfig({
+    title: config.title,
+
     dest: './dist',
     public: './src/public',
-
-    title: '南柯一梦',
-
-    alias: {},
+    alias: {
+        '@author': resolve('./src/pages/author'),
+        '@blog': resolve('./src/pages/blog'),
+        '@document': resolve('./src/pages/document'),
+        '@photo': resolve('./src/pages/photo'),
+        '@tool': resolve('./src/pages/tool'),
+        '@video': resolve('./src/pages/video'),
+    },
 
     theme: hopeTheme({
-        iconAssets: 'fontawesome',
         darkmode: 'toggle',
-        fullscreen: true,
+        iconAssets: 'fontawesome',
 
-        titleIcon: true,
-        repoDisplay: true,
-        logo: '/image/avatar_small.png',
-        repo: 'https://github.com/huiyuan33/monorepo',
-        docsDir: 'docs/src',
+        logo: config.avatar,
+        repo: config.github,
+        docsDir: config.codeDir,
 
-        navbar: Config.navbarOptions,
-        sidebar: Config.sidebarOptions,
+        navbar,
+        sidebar,
+
         plugins: {
             blog: true,
-            searchPro: Config.searchProOptions,
+            searchPro: {
+                hotKeys: [{ key: 'f', ctrl: true }],
+                indexContent: true,
+                customFields: [
+                    {
+                        getter: (page) => page.path,
+                        formatter: 'path: docs/src/pages$content',
+                    },
+                ],
+            },
         },
     }),
 
-    bundler: viteBundler(),
+    bundler: viteBundler({
+        viteOptions: {
+            define: {},
+        },
+    }),
 });

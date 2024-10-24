@@ -1,6 +1,6 @@
 import { NavbarOptions } from 'vuepress-theme-hope';
 
-export const navbarOptions: NavbarOptions = [
+export const navbar: NavbarOptions = [
     {
         link: '/home.html',
         text: '首页',
@@ -22,7 +22,7 @@ export const navbarOptions: NavbarOptions = [
         icon: 'screwdriver-wrench',
     },
     {
-        link: '/image/',
+        link: '/photo/',
         text: '图片',
         icon: 'image',
     },
