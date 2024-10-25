@@ -4,9 +4,10 @@ dist
 build
 coverage
 node_modules
+.cache
+.temp
 
 # Ignore files
-package.json
 package-lock.json
 pnpm-lock.yaml
 

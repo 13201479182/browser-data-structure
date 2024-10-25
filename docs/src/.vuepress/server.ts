@@ -5,7 +5,7 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import { hopeTheme } from 'vuepress-theme-hope';
 
 import { resolve } from 'node:path';
-import config from '../../config.ts';
+import config from '../../config';
 import { navbar, sidebar } from './config';
 
 type Page = SearchProCustomFieldOptions['getter'] extends (arg: infer R) => any ? R : any;

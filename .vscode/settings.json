@@ -9,8 +9,8 @@
         "editor.quickSuggestions": {
             "other": true,
             "comments": true,
-            "strings": true,
-        },
+            "strings": true
+        }
     },
     "files.exclude": {
         ".vscode/extensions.json": true,
@@ -24,7 +24,8 @@
         "**/.npmrc": true,
         "**/eslint.config.cjs": true,
         "**/pnpm-lock.yaml": true,
-        "**/.cache": true
+        "**/.cache": true,
+        "**/tsconfig.tsbuildinfo": true
     },
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "workbench.iconTheme": "vscode-icons",
@@ -33,20 +34,17 @@
         "PowerShell": {
             "source": "PowerShell",
             "icon": "terminal-powershell",
-            "color": "terminal.ansiBlue",
+            "color": "terminal.ansiBlue"
         },
         "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
+            "path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
             "args": [],
             "icon": "terminal-cmd",
             "color": "terminal.ansiRed"
         },
         "Git Bash": {
             "source": "Git Bash",
-            "color": "terminal.ansiYellow",
+            "color": "terminal.ansiYellow"
         }
     }
 }

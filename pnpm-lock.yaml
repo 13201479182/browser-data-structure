@@ -67,6 +67,9 @@ importers:
 
   .:
     devDependencies:
+      '@hyuan/docs':
+        specifier: 'workspace:'
+        version: link:docs
       '@hyuan/eslint-config':
         specifier: 'workspace:'
         version: link:packages/eslint-config
@@ -100,12 +103,18 @@ importers:
       sass-embedded:
         specifier: catalog:vue-press
         version: 1.79.4
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
       vite:
         specifier: 'catalog:'
         version: 5.4.2(@types/node@22.5.0)(lightningcss@1.27.0)(sass-embedded@1.79.4)(sass@1.79.4)(stylus@0.54.8)(terser@5.34.1)
       vue:
         specifier: 'catalog:'
         version: 3.5.11(typescript@5.5.4)
+      vue-tsc:
+        specifier: 'catalog:'
+        version: 2.1.6(typescript@5.5.4)
       vuepress:
         specifier: catalog:vue-press
         version: 2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@22.5.0)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.79.4)(sass@1.79.4)(stylus@0.54.8)(terser@5.34.1)(typescript@5.5.4)(yaml@2.5.1))(typescript@5.5.4)(vue@3.5.11(typescript@5.5.4))
@@ -137,13 +146,26 @@ importers:
         specifier: catalog:eslint-config
         version: 8.2.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
 
-  packages/tsc-test:
+  packages/typescript-config:
     devDependencies:
-      typescript:
-        specifier: 'catalog:'
-        version: 5.5.4
-
-  packages/typescript-config: {}
+      '@eslint/config-inspector':
+        specifier: catalog:eslint-config
+        version: 0.5.4(eslint@9.9.0(jiti@1.21.6))
+      eslint-config-prettier:
+        specifier: catalog:eslint-config
+        version: 9.1.0(eslint@9.9.0(jiti@1.21.6))
+      eslint-define-config:
+        specifier: catalog:eslint-config
+        version: 2.1.0
+      eslint-plugin-prettier:
+        specifier: catalog:eslint-config
+        version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.0(jiti@1.21.6)))(eslint@9.9.0(jiti@1.21.6))(prettier@3.3.3)
+      eslint-plugin-vue:
+        specifier: catalog:eslint-config
+        version: 9.27.0(eslint@9.9.0(jiti@1.21.6))
+      typescript-eslint:
+        specifier: catalog:eslint-config
+        version: 8.2.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
 
 packages:
 
@@ -3807,7 +3829,7 @@ snapshots:
       mlly: 1.7.1
       mrmime: 2.0.0
       open: 10.1.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
       ws: 8.18.0
     transitivePeerDependencies:
       - bufferutil
@@ -4276,7 +4298,7 @@ snapshots:
       '@typescript-eslint/types': 8.2.0
       '@typescript-eslint/typescript-estree': 8.2.0(typescript@5.5.4)
       '@typescript-eslint/visitor-keys': 8.2.0
-      debug: 4.3.6
+      debug: 4.3.7
       eslint: 9.9.0(jiti@1.21.6)
     optionalDependencies:
       typescript: 5.5.4
@@ -4292,7 +4314,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.2.0(typescript@5.5.4)
       '@typescript-eslint/utils': 8.2.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
-      debug: 4.3.6
+      debug: 4.3.7
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -4306,7 +4328,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.2.0
       '@typescript-eslint/visitor-keys': 8.2.0
-      debug: 4.3.6
+      debug: 4.3.7
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -4445,9 +4467,9 @@ snapshots:
   '@vue/language-core@2.1.6(typescript@5.5.4)':
     dependencies:
       '@volar/language-core': 2.4.6
-      '@vue/compiler-dom': 3.5.11
+      '@vue/compiler-dom': 3.5.12
       '@vue/compiler-vue2': 2.7.16
-      '@vue/shared': 3.5.11
+      '@vue/shared': 3.5.12
       computeds: 0.0.1
       minimatch: 9.0.5
       muggle-string: 0.4.1
@@ -7095,7 +7117,7 @@ snapshots:
 
   vue-eslint-parser@9.4.3(eslint@9.9.0(jiti@1.21.6)):
     dependencies:
-      debug: 4.3.6
+      debug: 4.3.7
       eslint: 9.9.0(jiti@1.21.6)
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3

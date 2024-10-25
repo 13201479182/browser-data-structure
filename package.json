@@ -6,9 +6,9 @@
   "scripts": {
     "commit": "git pull && git add . && gitmoji -c && git push",
     "dev": "vite --host --port=3000",
-    "build": "vue-tsc && vite build",
+    "build": "pnpm lint && vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
+    "lint": "pnpm -r lint && vue-tsc --noEmit && eslint --fix .",
     "docs:dev": "pnpm --filter docs run docs:dev",
     "docs:build": "pnpm --filter docs run docs:build",
     "docs:preview": "pnpm --filter docs run docs:preview",
@@ -18,12 +18,13 @@
   "devDependencies": {
     "@hyuan/eslint-config": "workspace:",
     "@hyuan/typescript-config": "workspace:",
+    "@hyuan/docs": "workspace:",
     "eslint": "catalog:",
     "gitmoji-cli": "catalog:",
     "prettier": "catalog:",
-    "typescript": "catalog:",
     "vite": "catalog:",
-    "vue-tsc": "catalog:"
+    "vue-tsc": "catalog:",
+    "typescript": "catalog:"
   },
   "author": "刘汇源",
   "license": "ISC"

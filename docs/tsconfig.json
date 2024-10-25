@@ -1,0 +1,15 @@
+{
+  "extends": "@hyuan/typescript-config",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "src/types/*.d.ts",
+    "src/.vuepress/**/*.ts",
+    "src/.vuepress/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "./config.ts"
+  ],
+  "exclude": ["src/.vuepress/.temp", "src/.vuepress/.cache"]
+}

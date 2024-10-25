@@ -1,15 +1,28 @@
 {
   "name": "@hyuan/typescript-config",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
+  "exports": {
+    ".": "./src/tsconfig.web.json",
+    "./web": "./src/tsconfig.web.json",
+    "./node": "./src/tsconfig.node.json",
+    "./vitest": "./src/tsconfig.vitest.json",
+    "./lib": "./src/tsconfig.lib.json"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "main": "./src/tsconfig.web.json",
-  "exports": {
-    "./web": "./src/tsconfig.web.json",
-    "./vitest": "./src/tsconfig.vitest.json",
-    "./node": "./src/tsconfig.node.json",
-    "./lib": "./src/tsconfig.lib.json"
+  "scripts": {
+    "check": "config-inspector",
+    "report": "node scripts/generate-reporter.js"
+  },
+  "devDependencies": {
+    "eslint-define-config": "catalog:eslint-config",
+    "eslint-plugin-prettier": "catalog:eslint-config",
+    "eslint-config-prettier": "catalog:eslint-config",
+    "typescript-eslint": "catalog:eslint-config",
+    "eslint-plugin-vue": "catalog:eslint-config",
+    "@eslint/config-inspector": "catalog:eslint-config"
   }
 }
