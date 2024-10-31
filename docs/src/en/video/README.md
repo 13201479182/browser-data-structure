@@ -1,5 +1,5 @@
 ---
-title: 视频
+title: Video
 icon: video
 article: false
 ---

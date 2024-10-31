@@ -3,7 +3,7 @@ home: true
 
 title: 首页
 icon: home
-heroImage: /image/home/logo.png
+heroImage: /image/home/logo.jpg
 heroText: VuePress Theme Hope
 tagline: 一个具有强大功能的 vuepress 主题✨
 

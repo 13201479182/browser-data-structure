@@ -1,4 +1,4 @@
 ---
 home: true
-title: Empty Page
+title: English
 ---

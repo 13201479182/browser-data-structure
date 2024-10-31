@@ -1,7 +1,7 @@
 ---
 title: demo
 icon: article
-cover: /image/home/logo.png
+cover: /image/blog/cover.jpg
 ---
 
 ## 这是英文文章编写案列

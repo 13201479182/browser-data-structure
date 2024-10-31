@@ -14,36 +14,48 @@ tagline: 保持年轻，保持好奇，保持理性，永远都不要停止思�
 
 projects:
   - icon: project
-    name: 项目名称
-    desc: 项目详细描述
+    name: Project Name
+    desc: Project description
     link: https://你的项目链接
 
   - icon: link
-    name: 链接名称
-    desc: 链接详细描述
+    name: Link Name
+    desc: Link Detailed Description
     link: https://链接地址
 
   - icon: book
-    name: 书籍名称
-    desc: 书籍详细描述
+    name: Book Title
+    desc: Book Detailed Description
     link: https://你的书籍链接
 
   - icon: article
-    name: 文章名称
-    desc: 文章详细描述
+    name: Article Title
+    desc: Article Detailed Description
     link: https://你的文章链接
 
   - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
+    name: Partner Name
+    desc: Partner Detailed Introduction
     link: https://你的伙伴链接
 
   - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
+    name: Custom Project
+    desc: Customized detailed introduction
     link: https://你的自定义链接
 ---
 
-<script setup="ts">
-  import '@util/firefly.ts'
+<script setup lang="ts">
+  import FireFlyFactory from '@util/firefly.ts'
+
+  import { onMounted, onUnmounted } from 'vue'
+
+  let fireFlyFactory: string = null;
+
+  onMounted(() => {
+    fireFlyFactory = new FireFlyFactory();
+  })
+
+  onUnmounted(() => {
+    fireFlyFactory.destroye()
+  })
 </script>

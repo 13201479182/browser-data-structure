@@ -1,4 +1,4 @@
 ---
 home: true
-title: Root
+title: 中文
 ---

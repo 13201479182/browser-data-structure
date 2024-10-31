@@ -44,6 +44,18 @@ projects:
     link: https://你的自定义链接
 ---
 
-<script setup="ts">
-  import '@util/firefly.ts'
+<script setup lang="ts">
+  import FireFlyFactory from '@util/firefly.ts'
+
+  import { onMounted, onUnmounted } from 'vue'
+
+  let fireFlyFactory: string = null;
+
+  onMounted(() => {
+    fireFlyFactory = new FireFlyFactory();
+  })
+
+  onUnmounted(() => {
+    fireFlyFactory.destroye()
+  })
 </script>

@@ -21,14 +21,14 @@ export const sidebar: LanguageFieldsConfig<ReturnType<typeof createSideBar>> = {
     en: createSideBar({
         '/en/document/vue3/': [
             {
-                text: 'vue3源码',
+                text: 'vue3 source code',
                 collapsible: true,
                 children: 'structure',
             },
         ],
         '/en/document/data-structure/': [
             {
-                text: '数据结构',
+                text: 'data structure',
                 collapsible: true,
                 children: 'structure',
             },

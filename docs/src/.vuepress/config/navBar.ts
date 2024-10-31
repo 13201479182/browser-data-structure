@@ -15,12 +15,12 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
                 {
                     icon: 'vue',
                     text: 'vue3源码',
-                    link: 'vue3/',
+                    link: 'vue3/demo1',
                 },
                 {
                     icon: 'data-structure',
                     text: '数据结构',
-                    link: 'data-structure/',
+                    link: 'data-structure/demo1',
                 },
             ],
         },
@@ -49,45 +49,45 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
     en: [
         {
             link: '/en/home/',
-            text: '首页',
+            text: 'Home',
             icon: 'home',
         },
         {
             link: '/en/document/',
-            text: '文档',
+            text: 'Document',
             icon: 'document',
             prefix: '/en/document/',
             children: [
                 {
                     icon: 'vue',
-                    text: 'vue3源码',
-                    link: 'vue3/',
+                    text: 'vue3 source code',
+                    link: 'vue3/demo1',
                 },
                 {
                     icon: 'data-structure',
-                    text: '数据结构',
-                    link: 'data-structure/',
+                    text: 'data structure',
+                    link: 'data-structure/demo1',
                 },
             ],
         },
         {
             link: '/en/blog/',
-            text: '博客',
+            text: 'Blog',
             icon: 'blog',
         },
         {
             link: '/en/tool/',
-            text: '工具',
+            text: 'Tookit',
             icon: 'tool',
         },
         {
             link: '/en/photo/',
-            text: '图片',
+            text: 'Image',
             icon: 'image',
         },
         {
             link: '/en/video/',
-            text: '视频',
+            text: 'Video',
             icon: 'video',
         },
     ],

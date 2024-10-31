@@ -1,19 +1,19 @@
 ---
 home: true
 
-title: 首页
+title: Home
 icon: home
-heroImage: /image/home/logo.png
+heroImage: /image/home/logo.jpg
 heroText: VuePress Theme Hope
-tagline: 一个具有强大功能的 vuepress 主题✨
+tagline: A vuepress theme with powerful features✨
 
 actions:
-  - text: 快速上手
+  - text: Get started quickly
     link: /vue-press/
     icon: signs-post
     type: primary
 
-  - text: 指南
+  - text: Guide
     icon: lightbulb
     link: /zh/guide/
 
@@ -24,14 +24,14 @@ author:
   - name: Meteorlxy
 ---
 
-## 使用指南
+## Usage Guidelines
 
-### 语法
+### Grammar
 
 - [vuepress](https://vuepress.vuejs.org/zh/guide/markdown.html)
 - [vuepress-hope](https://theme-hope.vuejs.press/zh/guide/markdown/intro.html)
 
-### 插件
+### Plugins
 
 - [font-awesome](https://fontawesome.com/search?o=r&m=free)
 - [plugin-search-pro](https://plugin-search-pro.vuejs.press/zh/config.html#customfields)

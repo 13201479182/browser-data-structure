@@ -2,9 +2,9 @@
 export default {
     siteConfig: {
         // 网站标题
-        title: '南柯一梦',
+        title: '芙莉莲',
         // 个人头像
-        avatar: '/avatar.png',
+        avatar: '/avatar.webp',
         // 网站描述
         description: '南柯一梦的博客',
 

@@ -41,7 +41,7 @@ export default hopeTheme({
             },
 
             displayFooter: true,
-            footer: `MIT Licensed | Copyright © 2019-present <a href="/en/author/">${config.personConfig.author}</a>`,
+            footer: `MIT Licensed | Copyright © 2024-present <a href="/en/author/">${config.personConfig.author}</a>`,
             copyright: false,
         },
 
@@ -58,7 +58,7 @@ export default hopeTheme({
             },
 
             displayFooter: true,
-            footer: `MIT Licensed | Copyright © 2019-present <a href="/zh/author/">${config.personConfig.author}</a>`,
+            footer: `MIT Licensed | Copyright © 2024-present <a href="/zh/author/">${config.personConfig.author}</a>`,
             copyright: false,
         },
     },
