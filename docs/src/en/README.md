@@ -1,4 +1,4 @@
 ---
 home: true
-title: Document
+title: Empty Page
 ---

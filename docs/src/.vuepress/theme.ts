@@ -11,6 +11,7 @@ export default hopeTheme({
     repo: config.siteConfig.github,
     docsDir: config.siteConfig.codeDir,
 
+    lastUpdated: true,
     author: {
         name: config.personConfig.author,
         url: config.personConfig.url,
@@ -74,6 +75,8 @@ export default hopeTheme({
 
     plugins: {
         blog: true,
+
+        readingTime: false,
 
         // Install @waline/client before enabling it
         // Note: This is for testing ONLY!

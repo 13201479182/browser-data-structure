@@ -4,18 +4,16 @@ export const sidebar: LanguageFieldsConfig<ReturnType<typeof createSideBar>> = {
     zh: createSideBar({
         '/zh/document/vue3/': [
             {
-                text: 'vue3章节',
-                icon: 'laptop-code',
-                link: '1',
+                text: 'vue3源码',
                 collapsible: true,
+                children: 'structure',
             },
         ],
         '/zh/document/data-structure/': [
             {
-                text: 'data-structure章节',
-                icon: 'laptop-code',
-                link: '2',
+                text: '数据结构',
                 collapsible: true,
+                children: 'structure',
             },
         ],
     }),
@@ -23,18 +21,16 @@ export const sidebar: LanguageFieldsConfig<ReturnType<typeof createSideBar>> = {
     en: createSideBar({
         '/en/document/vue3/': [
             {
-                text: 'vue3章节',
-                icon: 'laptop-code',
-                link: '1',
+                text: 'vue3源码',
                 collapsible: true,
+                children: 'structure',
             },
         ],
         '/en/document/data-structure/': [
             {
-                text: 'data-structure章节',
-                icon: 'laptop-code',
-                link: '2',
+                text: '数据结构',
                 collapsible: true,
+                children: 'structure',
             },
         ],
     }),

@@ -2,6 +2,14 @@
   "extends": "@hyuan/typescript-config",
   "compilerOptions": {
     "composite": true,
+    "paths": {
+      "@config": [
+        "./config.ts"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+    }
   },
   "include": [
     "types/**/*.d.ts",

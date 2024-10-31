@@ -22,9 +22,10 @@ export default {
     },
 
     proConfig: {
+        defaultLang: 'en',
         // 文章密码
         articlePWord: '123',
         // iconfont网络图标库地址
-        iconFontUrl: '//at.alicdn.com/t/c/font_4728827_ikvgja7hsar.css',
+        iconFontUrl: '//at.alicdn.com/t/c/font_4728827_7y4m8fiy143.css',
     },
 };

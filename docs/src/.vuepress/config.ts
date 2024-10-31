@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
 
-import { defineUserConfig } from 'vuepress';
 import { getDirname } from 'vuepress/utils';
+import { defineUserConfig } from 'vuepress';
 
 import theme from './theme';
 import config from '../../config';
@@ -10,8 +10,6 @@ export default defineUserConfig({
     base: '/',
     dest: './dist',
     public: './src/public',
-
-    lang: 'zh-CN',
 
     alias: {
         '@config': resolve(getDirname(import.meta.url), '../../config.ts'),
