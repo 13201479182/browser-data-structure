@@ -1,13 +1,13 @@
 {
   "name": "@hyuan/docs",
-  "version": "0.0.1",
-  "description": "A VuePress project",
+  "description": "A project of vuepress-theme-hope",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
-  "main": "./config.ts",
   "scripts": {
-    "docs:dev": "vuepress dev src -c=./src/.vuepress/server.ts --clean-cache",
-    "docs:build": "vuepress build src -c=./src/.vuepress/server.ts --clean-cache",
+    "docs:build": "vuepress-vite build src --clean-cache",
+    "docs:dev": "vuepress-vite dev src --clean-cache",
+    "docs:update-package": "pnpm dlx vp-update",
     "docs:preview": "vite preview --outDir=dist",
     "lint": "vue-tsc --noEmit"
   },
@@ -18,7 +18,6 @@
     "vue": "catalog:",
     "vuepress": "catalog:vue-press",
     "vuepress-theme-hope": "catalog:vue-press",
-    "vuepress-plugin-search-pro": "catalog:vue-press",
     "sass-embedded": "catalog:vue-press",
     "@vuepress/bundler-vite": "catalog:vue-press"
   }

@@ -1,13 +1,7 @@
+// https://theme-hope.vuejs.press/zh/config/style.html#config-scss
+
+// scss变量覆盖
+
 $theme-color: #f50b8c;
 
 $theme-colors: #2196f3, #f26d6d, #09d28b, #fb9b5f;
-
-.route-link.vp-brand {
-    .vp-nav-logo {
-        width: 40px;
-        height: 40px;
-        border: 2px solid var(--vp-c-accent);
-        border-radius: 50%;
-    }
-}
-

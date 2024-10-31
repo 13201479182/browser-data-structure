@@ -4,7 +4,7 @@ packages:
 
 catalog:
   vite: ^5.3.4
-  vue: ^3.5.11
+  vue: ^3.5.12
   vue-tsc: ^2.1.6
   typescript: ^5.5.4
   eslint: ^9.9.0
@@ -21,8 +21,7 @@ catalogs:
     '@eslint/config-inspector': 0.5.4
 
   vue-press:
-    vuepress: 2.0.0-rc.17
-    '@vuepress/bundler-vite': 2.0.0-rc.17
-    vuepress-theme-hope: 2.0.0-rc.58
-    vuepress-plugin-search-pro: 2.0.0-rc.57
-    sass-embedded: 1.79.4
+    vuepress: 2.0.0-rc.18
+    '@vuepress/bundler-vite': 2.0.0-rc.18
+    vuepress-theme-hope: 2.0.0-rc.59
+    sass-embedded: 1.79.5

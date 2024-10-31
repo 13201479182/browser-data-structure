@@ -1,2 +1,4 @@
-export { navbar } from './navBar';
-export { sidebar } from './sideBar';
+import { navbar } from './navBar';
+import { sidebar } from './sideBar';
+
+export { navbar, sidebar };
