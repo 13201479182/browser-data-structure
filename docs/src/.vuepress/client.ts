@@ -9,7 +9,11 @@ export default defineClientConfig({
             const logo = document.querySelector('.vp-nav-logo');
             if (logo && logo.parentNode) {
                 logo.parentNode.addEventListener('click', function () {
-                    window.location.href = `/${config.proConfig.defaultLang}/author/`;
+                    const res = /^\/(?<lang>[a-zA-Z]+)\//u.exec(window.location.pathname);
+                    if (res) {
+                        const lang = res.groups!.lang;
+                        window.location.href = `/${lang}/author/`;
+                    }
                 });
             }
         };

@@ -22,7 +22,7 @@ export default {
     },
 
     proConfig: {
-        defaultLang: 'en',
+        defaultLang: 'zh',
         // 文章密码
         articlePWord: '123',
         // iconfont网络图标库地址
