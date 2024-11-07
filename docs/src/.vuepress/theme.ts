@@ -109,23 +109,26 @@ export default hopeTheme({
 
         // These features are enabled for demo, only preserve features you need here
         mdEnhance: {
-            align: true,
+            flowchart: true,
+            footnote: true,
+            vPre: true,
             attrs: true,
+            align: true,
+
             component: true,
-            demo: true,
             include: true,
             mark: true,
             plantuml: true,
             spoiler: true,
             stylize: [
                 {
-                    matcher: 'Recommended',
-                    replacer: ({ tag }) => {
+                    matcher: /^(?<key>不|没)/u,
+                    replacer: ({ tag, attrs, content }) => {
                         if (tag === 'em')
                             return {
-                                tag: 'Badge',
-                                attrs: { type: 'tip' },
-                                content: 'Recommended',
+                                tag: 'span',
+                                attrs: { ...attrs, style: 'color: red' },
+                                content,
                             };
                     },
                 },
@@ -133,7 +136,6 @@ export default hopeTheme({
             sub: true,
             sup: true,
             tasklist: true,
-            vPre: true,
 
             // install chart.js before enabling it
             // chart: true,
