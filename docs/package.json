@@ -20,6 +20,7 @@
     "vuepress-theme-hope": "catalog:vue-press",
     "sass-embedded": "catalog:vue-press",
     "@vuepress/bundler-vite": "catalog:vue-press",
-    "flowchart.ts": "catalog:vue-press"
+    "flowchart.ts": "catalog:vue-press",
+    "@vue/repl": "catalog:vue-press"
   }
 }

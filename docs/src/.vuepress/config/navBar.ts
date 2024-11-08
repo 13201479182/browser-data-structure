@@ -9,7 +9,7 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
         },
         {
             text: '文档',
-            icon: 'document',
+            icon: 'y-document',
             prefix: '/zh/document/',
             children: [
                 {
@@ -27,22 +27,22 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
         {
             link: '/zh/blog/',
             text: '博客',
-            icon: 'blog',
+            icon: 'y-blog',
         },
         {
             link: '/zh/tool/',
             text: '工具',
-            icon: 'tool',
+            icon: 'y-tool',
         },
         {
             link: '/zh/photo/',
             text: '图片',
-            icon: 'image',
+            icon: 'y-image',
         },
         {
             link: '/zh/video/',
             text: '视频',
-            icon: 'video',
+            icon: 'y-video',
         },
     ],
 
@@ -50,21 +50,21 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
         {
             link: '/en/home/',
             text: 'Home',
-            icon: 'home',
+            icon: 'y-home',
         },
         {
             link: '/en/document/',
             text: 'Document',
-            icon: 'document',
+            icon: 'y-document',
             prefix: '/en/document/',
             children: [
                 {
-                    icon: 'vue',
+                    icon: 'y-vue',
                     text: 'vue3 source code',
                     link: 'vue3/demo1',
                 },
                 {
-                    icon: 'data-structure',
+                    icon: 'y-data-structure',
                     text: 'data structure',
                     link: 'data-structure/demo1',
                 },
@@ -73,22 +73,22 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
         {
             link: '/en/blog/',
             text: 'Blog',
-            icon: 'blog',
+            icon: 'y-blog',
         },
         {
             link: '/en/tool/',
             text: 'Tookit',
-            icon: 'tool',
+            icon: 'y-tool',
         },
         {
             link: '/en/photo/',
             text: 'Image',
-            icon: 'image',
+            icon: 'y-image',
         },
         {
             link: '/en/video/',
             text: 'Video',
-            icon: 'video',
+            icon: 'y-video',
         },
     ],
 };

@@ -1,5 +1,5 @@
 ---
 title: 工具
-icon: tool
+icon: y-tool
 article: false
 ---

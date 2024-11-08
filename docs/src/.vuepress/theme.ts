@@ -114,12 +114,16 @@ export default hopeTheme({
             vPre: true,
             attrs: true,
             align: true,
+            mark: true,
+            // vuePlayground: true,
 
             component: true,
             include: true,
-            mark: true,
             plantuml: true,
             spoiler: true,
+            sub: true,
+            sup: true,
+            tasklist: true,
             stylize: [
                 {
                     matcher: /^(?<key>不|没)/u,
@@ -133,9 +137,6 @@ export default hopeTheme({
                     },
                 },
             ],
-            sub: true,
-            sup: true,
-            tasklist: true,
 
             // install chart.js before enabling it
             // chart: true,

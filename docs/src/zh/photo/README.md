@@ -1,5 +1,5 @@
 ---
 title: 图片
-icon: image
+icon: y-image
 article: false
 ---

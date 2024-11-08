@@ -4,7 +4,7 @@ portfolio: true
 
 title: Portfolio Home
 author: 刘汇源
-icon: home
+icon: y-home
 name: Conan Edogawa
 avatar: /image/author/avatar.png
 

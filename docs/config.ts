@@ -26,6 +26,9 @@ export default {
         // 文章密码
         articlePWord: '123',
         // iconfont网络图标库地址
-        iconFontUrl: '//at.alicdn.com/t/c/font_4728827_7y4m8fiy143.css',
+        iconFontUrl: [
+            '//at.alicdn.com/t/c/font_4728827_jhjd6ytwp8.css',
+            '//at.alicdn.com/t/c/font_4739856_aqd18vkn6ev.css',
+        ],
     },
 };

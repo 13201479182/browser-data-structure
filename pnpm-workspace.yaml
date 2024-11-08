@@ -22,7 +22,8 @@ catalogs:
 
   vue-press:
     vuepress: 2.0.0-rc.18
-    '@vuepress/bundler-vite': 2.0.0-rc.18
     vuepress-theme-hope: 2.0.0-rc.59
-    sass-embedded: ^1.80.3
+    sass-embedded: 1.80.3
     flowchart.ts: 3.0.1
+    '@vue/repl': 4.4.2
+    '@vuepress/bundler-vite': 2.0.0-rc.18

@@ -1,4 +1,4 @@
 ---
 home: true
-title: English
+title: 中文
 ---

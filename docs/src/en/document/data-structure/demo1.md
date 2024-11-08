@@ -1,5 +1,5 @@
 ---
-title: data structure 01
+title: 数据结构01
 article: false
 
 date: 2024-10-31
