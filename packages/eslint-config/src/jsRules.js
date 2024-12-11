@@ -44,7 +44,9 @@ module.exports = {
     'line-comment-position': 2,
     'max-depth': [2, 4],
     'max-lines': [2, 300],
-    'max-lines-per-function': [2, 30],
+    'max-lines-per-function': {
+        max: 100,
+    },
     'max-statements-per-line': [
         2,
         {

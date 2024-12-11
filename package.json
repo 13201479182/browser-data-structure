@@ -7,6 +7,7 @@
     "commit": "git pull && git add . && gitmoji -c && git push",
     "dev": "vite --host --port=3000",
     "build": "pnpm lint && vite build",
+    "build:package": "pnpm -r build",
     "preview": "vite preview",
     "lint": "pnpm -r lint && vue-tsc --noEmit && eslint --fix .",
     "docs:dev": "pnpm --filter docs run docs:dev",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@hyuan/eslint-config": "workspace:",
     "@hyuan/typescript-config": "workspace:",
+    "@hyuan/browser-data-structure": "workspace:",
     "@hyuan/docs": "workspace:",
     "eslint": "catalog:",
     "gitmoji-cli": "catalog:",

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "mian": "./config.js",
   "scripts": {
     "docs:build": "vuepress-vite build src --clean-cache",
     "docs:dev": "vuepress-vite dev src --clean-cache",

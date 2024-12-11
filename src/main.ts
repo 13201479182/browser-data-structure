@@ -1,4 +1,4 @@
-// import x from '@hyuan/docs';
-// console.log(x);
+import { Heap } from '@hyuan/browser-data-structure/src/heap/index';
 
-// const a: string = 1;
+// const h = new Heap(true);
+console.log(Heap);

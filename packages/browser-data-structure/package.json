@@ -1,0 +1,23 @@
+{
+  "name": "@hyuan/browser-data-structure",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@hyuan/typescript-config": "workspace:",
+    "typescript": "catalog:",
+    "tslib": "catalog:",
+    "vue-tsc": "catalog:",
+    "rollup": "catalog:browser-data-structure",
+    "rollup-plugin-dts": "catalog:browser-data-structure",
+    "@rollup/plugin-typescript": "catalog:browser-data-structure",
+    "@rollup/plugin-terser": "catalog:browser-data-structure"
+  },
+  "author": "",
+  "license": "ISC"
+}

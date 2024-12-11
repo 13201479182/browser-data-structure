@@ -1,0 +1,10 @@
+{
+  "extends": "@hyuan/typescript-config/lib",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
