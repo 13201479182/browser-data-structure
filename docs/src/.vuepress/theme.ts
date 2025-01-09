@@ -17,6 +17,8 @@ export default hopeTheme({
         url: config.personConfig.url,
     },
 
+    markdown: {},
+
     blog: {
         medias: {
             BiliBili: 'https://example.com',
@@ -69,6 +71,8 @@ export default hopeTheme({
             '/en/blog/article/': [config.proConfig.articlePWord],
         },
     },
+
+    breadcrumb: false,
 
     // enable it to preview all changes in time
     // hotReload: true,

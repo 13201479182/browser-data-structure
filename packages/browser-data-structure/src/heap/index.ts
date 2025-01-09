@@ -201,8 +201,8 @@ export class Heap<T = number> {
     _heapShift() {
         const heapTop = this.data.shift(),
             heapBottom = this.data.pop();
-        this.data.unshift(heapBottom);
         // 对堆顶元素向下堆化
+        this.data.unshift(heapBottom);
         this._adjustDownHeap();
         return heapTop;
     }
@@ -238,7 +238,6 @@ export class Heap<T = number> {
         endIndex = typeof endIndex === 'number' ? endIndex : 0;
 
         let parentIndex = this._getParentIndex(startIndex);
-
         while (parentIndex >= endIndex && parentIndex >= 0) {
             const extremeIndex = this._compareExtrem([
                 [this._getPriority(parentIndex), parentIndex],
@@ -253,7 +252,6 @@ export class Heap<T = number> {
             const parent = this.data[parentIndex];
             this.data[parentIndex] = this.data[startIndex];
             this.data[startIndex] = parent;
-
             // 继续向上堆化
             startIndex = parentIndex;
             parentIndex = this._getParentIndex(parentIndex);

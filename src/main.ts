@@ -1,4 +1,4 @@
-import { Heap } from '@hyuan/browser-data-structure/src/heap/index';
+import { Heap, Tree } from '@hyuan/browser-data-structure/src/index';
 
 // const h = new Heap(true);
-console.log(Heap);
+console.log(Tree);

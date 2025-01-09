@@ -6,14 +6,26 @@ import { defineUserConfig } from 'vuepress';
 import theme from './theme';
 import config from '../../config';
 
+const __dirName = getDirname(import.meta.url);
+
 export default defineUserConfig({
     base: '/',
     dest: './dist',
     public: './src/public',
 
     alias: {
-        '@config': resolve(getDirname(import.meta.url), '../../config.ts'),
-        '@util': resolve(getDirname(import.meta.url), '../../src/util'),
+        '@config': resolve(__dirName, '../../config.ts'),
+        '@util': resolve(__dirName, '../../src/util'),
+    },
+
+    define: {
+        //
+    },
+
+    markdown: {
+        importCode: {
+            handleImportPath: (str) => str.replace(/^@package/u, resolve(__dirName, '../../../packages')),
+        },
     },
 
     pagePatterns: ['**/*.md', '**/*.vue'],

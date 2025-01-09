@@ -9,6 +9,9 @@
       "@utils/*": [
         "./src/utils/*"
       ],
+      "@packages/*": [
+        "../packages/*"
+      ],
     }
   },
   "include": [

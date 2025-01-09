@@ -15,12 +15,12 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
                 {
                     icon: 'vue',
                     text: 'vue3源码',
-                    link: 'vue3/demo1',
+                    link: 'vue3/ref',
                 },
                 {
                     icon: 'data-structure',
                     text: '数据结构',
-                    link: 'data-structure/demo1',
+                    link: 'data-structure/heap',
                 },
             ],
         },
