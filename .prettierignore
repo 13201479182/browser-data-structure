@@ -8,6 +8,7 @@ node_modules
 .temp
 
 # Ignore files
+.pprettierrc
 package-lock.json
 pnpm-lock.yaml
 

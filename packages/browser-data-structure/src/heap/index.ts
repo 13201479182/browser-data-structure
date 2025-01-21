@@ -1,6 +1,6 @@
 type GetKey<T> = T extends object ? keyof T : null;
 
-export class Heap<T = number> {
+export class Heap<T extends object | number = number> {
     public data: T[] = [];
     public small: boolean;
     public priority: GetKey<T>;
@@ -10,7 +10,7 @@ export class Heap<T = number> {
      * @param isSmallHeap 小顶堆
      * @param key  当data为对象时,需要此字段对应的值作为大小顶堆的构建凭据
      */
-    constructor(isSmallHeap: boolean, key: GetKey<T> = null) {
+    constructor(isSmallHeap?: boolean, key: GetKey<T> = null) {
         let small = (this.small = Boolean(isSmallHeap) ? true : false),
             priority = (this.priority = key);
 
@@ -43,8 +43,8 @@ export class Heap<T = number> {
 
     // 插入数据
     insert(val: T | T[]) {
-        val = Array.isArray(val) ? val : [val];
-        val.forEach((item) => {
+        const valArr = Array.isArray(val) ? val : [val];
+        valArr.forEach((item) => {
             this.data.push(item);
             this._adjustUpHeap();
         });
@@ -67,17 +67,16 @@ export class Heap<T = number> {
     sort() {
         let len = this.data.length;
         while (len > 0) {
-            const index = len - 1;
+            const lastIndex = len - 1;
             /**
-             * 1. 将堆顶元素移除,放到数组末尾
-             * 2. 删除当前len对应的元素
-             * 3. 向下调整堆顶元素
+             * 1. 交换堆顶元素和堆尾元素
+             * 2. 向下调整堆顶元素
              */
             this.data.push(this.data[0]);
-            this.data[0] = this.data[index];
-            this.data.splice(index, 1);
+            this.data[0] = this.data[lastIndex];
+            this.data.splice(lastIndex, 1);
 
-            this._adjustDownHeap(0, index - 1);
+            this._adjustDownHeap(0, lastIndex - 1);
             len--;
         }
         return this;

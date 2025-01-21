@@ -34,7 +34,7 @@
         "PowerShell": {
             "source": "PowerShell",
             "icon": "terminal-powershell",
-            "color": "terminal.ansiBlue"
+            "color": "terminal.ansiMagenta"
         },
         "Command Prompt": {
             "path": [

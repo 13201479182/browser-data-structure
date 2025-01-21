@@ -1,6 +1,6 @@
 // https://prettier.io/docs/en/options
 module.exports = {
-    printWidth: 120,
+    printWidth: 85,
     semi: true,
     singleQuote: true,
     quoteProps: 'consistent',
