@@ -18,6 +18,7 @@ catalogs:
     rollup-plugin-dts: 6.1.1
     '@rollup/plugin-typescript': 12.1.1
     '@rollup/plugin-terser': 0.4.4
+    '@rollup/plugin-image': 3.0.3
 
   eslint-config:
     eslint-define-config: ^2.1.0

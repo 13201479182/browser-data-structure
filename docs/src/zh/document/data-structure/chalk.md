@@ -1,5 +1,5 @@
 ---
-title: log(chalk)
+title: log(Chalk)
 article: false
 
 date: 2024-10-31

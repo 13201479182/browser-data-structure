@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   browser-data-structure:
+    '@rollup/plugin-image':
+      specifier: 3.0.3
+      version: 3.0.3
     '@rollup/plugin-terser':
       specifier: 0.4.4
       version: 0.4.4
@@ -155,6 +158,9 @@ importers:
       '@hyuan/typescript-config':
         specifier: 'workspace:'
         version: link:../typescript-config
+      '@rollup/plugin-image':
+        specifier: catalog:browser-data-structure
+        version: 3.0.3(rollup@4.28.0)
       '@rollup/plugin-terser':
         specifier: catalog:browser-data-structure
         version: 0.4.4(rollup@4.28.0)
@@ -744,6 +750,15 @@ packages:
   '@pnpm/npm-conf@2.3.1':
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
+
+  '@rollup/plugin-image@3.0.3':
+    resolution: {integrity: sha512-qXWQwsXpvD4trSb8PeFPFajp8JLpRtqqOeNYRUKnEQNHm7e5UP7fuSRcbjQAJ7wDZBbnJvSdY5ujNBQd9B1iFg==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/plugin-terser@0.4.4':
     resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
@@ -2477,6 +2492,10 @@ packages:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
 
+  mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -4052,6 +4071,13 @@ snapshots:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+
+  '@rollup/plugin-image@3.0.3(rollup@4.28.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.3(rollup@4.28.0)
+      mini-svg-data-uri: 1.4.4
+    optionalDependencies:
+      rollup: 4.28.0
 
   '@rollup/plugin-terser@0.4.4(rollup@4.28.0)':
     dependencies:
@@ -6032,6 +6058,8 @@ snapshots:
   mimic-fn@4.0.0: {}
 
   mimic-function@5.0.1: {}
+
+  mini-svg-data-uri@1.4.4: {}
 
   minimatch@3.1.2:
     dependencies:

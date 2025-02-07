@@ -17,17 +17,15 @@ export default hopeTheme({
         url: config.personConfig.url,
     },
 
-    markdown: {},
-
-    blog: {
-        medias: {
-            BiliBili: 'https://example.com',
-            VuePressThemeHope: {
-                icon: 'https://theme-hope-assets.vuejs.press/logo.svg',
-                link: 'https://theme-hope.vuejs.press',
-            },
-        },
-    },
+    // blog: {
+    //     medias: {
+    //         BiliBili: 'https://example.com',
+    //         VuePressThemeHope: {
+    //             icon: 'https://theme-hope-assets.vuejs.press/logo.svg',
+    //             link: 'https://theme-hope.vuejs.press',
+    //         },
+    //     },
+    // },
 
     locales: {
         '/en/': {

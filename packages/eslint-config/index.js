@@ -27,7 +27,8 @@ module.exports = defineFlatConfig([
         languageOptions: {
             parser: tsParser,
         },
-        rules: Object.assign({}, jsRules, tsRules),
+        //  Object.assign({}, tsPlugin.configs.recommended.rules),
+        rules: tsRules,
         plugins: {
             '@typescript-eslint': tsPlugin,
         },
@@ -41,7 +42,7 @@ module.exports = defineFlatConfig([
                 parser: tsParser,
             },
         },
-        rules: Object.assign({}, jsRules, tsRules, vueRules),
+        rules: Object.assign({}, tsRules, vueRules),
         plugins: {
             '@typescript-eslint': tsPlugin,
         },
