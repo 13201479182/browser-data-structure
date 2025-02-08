@@ -21,6 +21,7 @@
     "@hyuan/typescript-config": "workspace:",
     "@hyuan/browser-data-structure": "workspace:",
     "@hyuan/docs": "workspace:",
+    "@hyuan/chalk": "workspace:",
     "eslint": "catalog:",
     "gitmoji-cli": "catalog:",
     "prettier": "catalog:",

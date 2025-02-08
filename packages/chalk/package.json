@@ -1,0 +1,24 @@
+{
+  "name": "@hyuan/chalk",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "eslint --fix . && rollup -c"
+  },
+  "devDependencies": {
+    "@hyuan/typescript-config": "workspace:",
+    "typescript": "catalog:",
+    "tslib": "catalog:",
+    "vue-tsc": "catalog:",
+    "rollup": "catalog:chalk",
+    "rollup-plugin-dts": "catalog:chalk",
+    "@rollup/plugin-typescript": "catalog:chalk",
+    "@rollup/plugin-terser": "catalog:chalk",
+    "@rollup/plugin-image": "catalog:chalk"
+  },
+  "author": "",
+  "license": "ISC"
+}
