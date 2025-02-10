@@ -145,6 +145,36 @@ export class Chalk<
     }
 
     /**
+     * 输出不同颜色的字
+     *
+     * @param msgs
+     * {
+     *    msg: {
+     *      color: 'colorPrimary',
+     *      bgColor: 'colorPrimary',
+     *    },
+     *    ...
+     * }
+     */
+    msg(msgs: {
+        [key: string]: Required<
+            Pick<ChalkVersionConfig<Extract<keyof C, string>>, 'color'>
+        > & { background?: ChalkColorPrimary<Extract<keyof C, string>> };
+    }) {
+        if (msgs && typeof msgs === 'object') {
+            const arr = [''];
+            Object.keys(msgs).forEach((msg) => {
+                arr[0] += `%c${msg}`;
+                const style = Object.entries(msgs[msg]).map(([key, value]) => {
+                    return `${key}:${this._reflectPrimaryColor(value)};`;
+                });
+                arr.push(style.join(''));
+            });
+            console.log(...arr);
+        }
+    }
+
+    /**
      * 输出图片
      *
      * @param url       图片地址

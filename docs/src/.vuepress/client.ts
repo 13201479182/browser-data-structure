@@ -9,7 +9,9 @@ export default defineClientConfig({
             const logo = document.querySelector('.vp-nav-logo');
             if (logo && logo.parentNode) {
                 logo.parentNode.addEventListener('click', function () {
-                    const res = /^\/(?<lang>[a-zA-Z]+)\//u.exec(window.location.pathname);
+                    const res = /^\/(?<lang>[a-zA-Z]+)\//u.exec(
+                        window.location.pathname,
+                    );
                     if (res) {
                         const lang = res.groups!.lang;
                         window.location.href = `/${lang}/author/`;
