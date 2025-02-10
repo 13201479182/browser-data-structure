@@ -13,14 +13,19 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
             prefix: '/zh/document/',
             children: [
                 {
-                    icon: 'vue',
+                    icon: 'y-vue',
                     text: 'vue3源码',
-                    link: 'vue3/ref',
+                    link: 'vue3/',
                 },
                 {
-                    icon: 'data-structure',
+                    icon: 'y-data-structure',
                     text: '数据结构',
-                    link: 'data-structure/heap',
+                    link: 'data-structure/',
+                },
+                {
+                    icon: 'y-tool',
+                    text: '工具包',
+                    link: 'tool/',
                 },
             ],
         },
@@ -30,9 +35,9 @@ export const navbar: LanguageFieldsConfig<NavbarOptions> = {
             icon: 'y-blog',
         },
         {
-            link: '/zh/tool/',
+            link: '/zh/toolkit/',
             text: '工具',
-            icon: 'y-tool',
+            icon: 'y-toolkit',
         },
         {
             link: '/zh/photo/',

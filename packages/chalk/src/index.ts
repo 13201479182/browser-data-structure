@@ -248,26 +248,48 @@ export class Chalk<
                 }
             });
         }
+
+        const { fontSize, padding, color, bgColor, heartColor } = defaultConfig;
         console.log(
             `%c${word}`,
             `
-                padding: ${defaultConfig.padding[0]}px ${defaultConfig.padding[1]}px;
-                font-size: ${defaultConfig.fontSize}px;
+                padding: ${padding[0]}px ${padding[1]}px;
+                font-size: ${fontSize}px;
                 font-weight: 600;
                 border-radius: 10px;
                 background:
-                radial-gradient(circle closest-side at 60% 43%, ${defaultConfig.bgColor} 26%, rgba(187,0,51,0) 27%),
-                radial-gradient(circle closest-side at 40% 43%, ${defaultConfig.bgColor} 26%, rgba(187,0,51,0) 27%),
-                radial-gradient(circle closest-side at 42% 22%, ${defaultConfig.heartColor} 43%, rgba(221,51,85,0) 45%),
-                radial-gradient(circle closest-side at 58% 22%, ${defaultConfig.heartColor} 43%, rgba(221,51,85,0) 45%),
-                radial-gradient(circle closest-side at 50% 35%, ${defaultConfig.heartColor} 32%, rgba(221,51,85,0) 27%),
-                radial-gradient(circle closest-side at 60% 43%, ${defaultConfig.bgColor} 26%, rgba(187,0,51,0) 27%) 50px 50px,
-                radial-gradient(circle closest-side at 40% 43%, ${defaultConfig.bgColor} 26%, rgba(187,0,51,0) 27%) 50px 50px,
-                radial-gradient(circle closest-side at 40% 22%, ${defaultConfig.heartColor} 40%, rgba(221,51,85,0) 45%) 52px 50px,
-                radial-gradient(circle closest-side at 60% 22%, ${defaultConfig.heartColor} 40%, rgba(221,51,85,0) 45%) 48px 50px,
-                radial-gradient(circle closest-side at 50% 35%, ${defaultConfig.heartColor} 30%, rgba(221,51,85,0) 37%) 50px 50px;
-                color: ${defaultConfig.color};
-                background-color: ${defaultConfig.bgColor};
+                radial-gradient(circle closest-side at 60% 43%, 
+                            ${bgColor} 26%, 
+                            rgba(187,0,51,0) 27%),
+                radial-gradient(circle closest-side at 40% 43%, 
+                            ${bgColor} 26%, 
+                            rgba(187,0,51,0) 27%),
+                radial-gradient(circle closest-side at 42% 22%, 
+                            ${heartColor} 43%, 
+                            rgba(221,51,85,0) 45%),
+                radial-gradient(circle closest-side at 58% 22%, 
+                            ${heartColor} 43%, 
+                            rgba(221,51,85,0) 45%),
+                radial-gradient(circle closest-side at 50% 35%, 
+                            ${heartColor} 32%, 
+                            rgba(221,51,85,0) 27%),
+                radial-gradient(circle closest-side at 60% 43%, 
+                            ${bgColor} 26%, 
+                            rgba(187,0,51,0) 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 43%, 
+                            ${bgColor} 26%, 
+                            rgba(187,0,51,0) 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 22%, 
+                            ${heartColor} 40%, 
+                            rgba(221,51,85,0) 45%) 52px 50px,
+                radial-gradient(circle closest-side at 60% 22%, 
+                            ${heartColor} 40%, 
+                            rgba(221,51,85,0) 45%) 48px 50px,
+                radial-gradient(circle closest-side at 50% 35%, 
+                            ${heartColor} 30%, 
+                            rgba(221,51,85,0) 37%) 50px 50px;
+                color: ${color};
+                background-color: ${bgColor};
                 background-size: 100px 100px;
             `,
         );

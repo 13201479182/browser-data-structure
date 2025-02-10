@@ -16,6 +16,13 @@ export const sidebar: LanguageFieldsConfig<ReturnType<typeof createSideBar>> = {
                 children: 'structure',
             },
         ],
+        '/zh/document/tool/': [
+            {
+                text: '工具包',
+                collapsible: true,
+                children: 'structure',
+            },
+        ],
     }),
 
     en: createSideBar({
@@ -29,6 +36,13 @@ export const sidebar: LanguageFieldsConfig<ReturnType<typeof createSideBar>> = {
         '/en/document/data-structure/': [
             {
                 text: 'data structure',
+                collapsible: true,
+                children: 'structure',
+            },
+        ],
+        '/en/document/tookit/': [
+            {
+                text: 'tool',
                 collapsible: true,
                 children: 'structure',
             },
