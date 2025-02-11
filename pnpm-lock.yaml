@@ -171,6 +171,9 @@ importers:
 
   packages/browser-data-structure:
     devDependencies:
+      '@hyuan/chalk':
+        specifier: 'workspace:'
+        version: link:../chalk
       '@hyuan/typescript-config':
         specifier: 'workspace:'
         version: link:../typescript-config

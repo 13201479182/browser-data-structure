@@ -3,26 +3,26 @@ type GetKey<T> = T extends object ? keyof T : null;
 export class Heap<T extends object | number = number> {
     public data: T[] = [];
     public small: boolean;
-    public priority: GetKey<T>;
+    public priority: GetKey<T> | null = null;
 
     /**
      *
      * @param isSmallHeap 小顶堆
      * @param key  当data为对象时,需要此字段对应的值作为大小顶堆的构建凭据
      */
-    constructor(isSmallHeap?: boolean, key: GetKey<T> = null) {
+    constructor(isSmallHeap?: boolean, key?: GetKey<T>) {
         let small = (this.small = Boolean(isSmallHeap) ? true : false),
-            priority = (this.priority = key);
+            priority = (this.priority = key ?? null);
 
         Object.defineProperties(this, {
             small: {
                 get() {
                     return small;
                 },
-                set(newVal) {
+                set(newVal: unknown) {
                     newVal = Boolean(newVal);
                     if (small !== newVal) {
-                        small = newVal;
+                        small = <boolean>newVal;
                         this.reset();
                     }
                 },
@@ -54,12 +54,12 @@ export class Heap<T extends object | number = number> {
     // 取数据
     pop(count = 1, callback: (data: T[]) => unknown) {
         if (count > this.data.length) count = this.data.length;
-        const result = [];
+        const result: T[] = [];
         while (count > 0) {
-            result.push(this._heapShift());
+            result.push(<T>this._heapShift());
             count--;
         }
-        callback && callback(result);
+        callback(result);
         return this;
     }
 
@@ -127,9 +127,9 @@ export class Heap<T extends object | number = number> {
     _getPriority(index: number) {
         const { priority } = this;
         if (typeof priority === 'string' && priority) {
-            return this.data[index][priority] as number;
+            return <number>this.data[index][priority];
         } else {
-            return this.data[index] as number;
+            return <number>this.data[index];
         }
     }
 
@@ -152,7 +152,7 @@ export class Heap<T extends object | number = number> {
     }
 
     // 获取当前索引对应子节点的极值索引
-    _getExtremeIndex(startIndex: number, endIndex?: number): number {
+    _getExtremeIndex(startIndex: number, endIndex: number): number {
         // 处理边界情况
         if (typeof endIndex === 'number' && endIndex <= startIndex) {
             return startIndex;
@@ -201,8 +201,10 @@ export class Heap<T extends object | number = number> {
         const heapTop = this.data.shift(),
             heapBottom = this.data.pop();
         // 对堆顶元素向下堆化
-        this.data.unshift(heapBottom);
-        this._adjustDownHeap();
+        if (heapBottom) {
+            this.data.unshift(heapBottom);
+            this._adjustDownHeap();
+        }
         return heapTop;
     }
 

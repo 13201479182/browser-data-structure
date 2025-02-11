@@ -75,7 +75,7 @@ export class Chalk<
 
     constructor(colors?: C) {
         // 初始化成员变量
-        this._initialization();
+        this._init();
         if (colors) {
             Object.keys(colors).forEach((key) => {
                 if (key.startsWith('_')) {
@@ -325,7 +325,7 @@ export class Chalk<
         );
     }
 
-    _initialization() {
+    _init() {
         const defaultColors: { [key in ChalkDefaultColorPrimary]: string } = {
             _black: '#00000',
             _white: '#FFFFFF',

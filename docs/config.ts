@@ -6,7 +6,7 @@ export default {
         // 个人头像
         avatar: '/avatar.webp',
         // 网站描述
-        description: '南柯一梦的博客',
+        description: 'liuhuiyuan的博客',
 
         // 项目仓库地址
         github: 'https://github.com/huiyuan33/monorepo',

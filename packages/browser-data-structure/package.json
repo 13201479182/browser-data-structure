@@ -6,10 +6,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "eslint --fix . && rollup -c"
   },
   "devDependencies": {
     "@hyuan/typescript-config": "workspace:",
+    "@hyuan/chalk": "workspace:",
     "typescript": "catalog:",
     "tslib": "catalog:",
     "vue-tsc": "catalog:",

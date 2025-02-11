@@ -53,7 +53,9 @@ class FireFly {
             const randomOffset = this.speedCoefficient;
 
             for (const attr in randomOffset) {
-                const currentValue = parseInt(window.getComputedStyle(this.fire)[attr]);
+                const currentValue = parseInt(
+                    window.getComputedStyle(this.fire)[attr],
+                );
                 if (currentValue === randomOffset[attr]) {
                     // 重置速度系数
                     this.speedCoefficient.top = this.genRandomNum(0, this.oh);

@@ -6,5 +6,7 @@
     "target": "ESNext",
     "moduleResolution": "bundler",
     "removeComments": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
   }
 }
