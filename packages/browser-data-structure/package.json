@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@hyuan/typescript-config": "workspace:",
-    "@hyuan/chalk": "workspace:",
     "typescript": "catalog:",
     "tslib": "catalog:",
     "vue-tsc": "catalog:",
