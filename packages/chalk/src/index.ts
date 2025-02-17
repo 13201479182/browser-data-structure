@@ -219,18 +219,24 @@ export class Chalk<
                 typeof lib === 'object' ?
                     lib.bgColor ?
                         lib.bgColor
-                    :   '_white'
+                    :   '_lib'
                 :   '_lib',
         };
+
         const verC: Required<ChalkVersionConfig<Extract<keyof C, string>>> = {
             name: typeof version === 'object' ? version.name : version,
             color:
-                typeof lib === 'object' ?
-                    lib.color ?
-                        lib.color
+                typeof version === 'object' ?
+                    version.color ?
+                        version.color
                     :   '_white'
                 :   '_white',
-            bgColor: '_version',
+            bgColor:
+                typeof version === 'object' ?
+                    version.bgColor ?
+                        version.bgColor
+                    :   '_version'
+                :   '_version',
         };
 
         console.log(

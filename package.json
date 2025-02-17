@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "commit": "git pull && git add . && gitmoji -c && git push",
-    "commit:p": "git pull && gitmoji -c",
+    "commit:partial": "git pull && gitmoji -c",
     "dev": "vite --host --port=3000",
     "preview": "vite preview",
     "lint": "vue-tsc --noEmit && eslint --fix .",

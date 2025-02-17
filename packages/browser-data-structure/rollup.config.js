@@ -1,9 +1,11 @@
+import { defineConfig } from 'rollup';
 import typescript from '@rollup/plugin-typescript';
 
 import dts from 'rollup-plugin-dts';
 import terser from '@rollup/plugin-terser';
+import resolve from '@rollup/plugin-node-resolve';
 
-export default [
+export default defineConfig([
     {
         input: './src/index.ts',
         output: {
@@ -30,6 +32,9 @@ export default [
             typescript({
                 declaration: false,
             }),
+            resolve({
+                include: ['@hyuan/chalk'],
+            }),
         ],
     },
-];
+]);

@@ -8,6 +8,9 @@
   "scripts": {
     "build": "eslint --fix . && rollup -c"
   },
+  "dependencies": {
+    "@hyuan/chalk": "workspace:"
+  },
   "devDependencies": {
     "@hyuan/typescript-config": "workspace:",
     "typescript": "catalog:",
@@ -16,7 +19,8 @@
     "rollup": "catalog:browser-data-structure",
     "rollup-plugin-dts": "catalog:browser-data-structure",
     "@rollup/plugin-typescript": "catalog:browser-data-structure",
-    "@rollup/plugin-terser": "catalog:browser-data-structure"
+    "@rollup/plugin-terser": "catalog:browser-data-structure",
+    "@rollup/plugin-node-resolve": "catalog:browser-data-structure"
   },
   "author": "",
   "license": "ISC"

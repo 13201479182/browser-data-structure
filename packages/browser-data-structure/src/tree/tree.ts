@@ -1,71 +1,112 @@
 import { Chalk } from '@hyuan/chalk';
-new Chalk().log('event', 'hello world');
 
-type DefaultRequiredField = {
+type DefaultTreeData = {
     id: string | number;
-    data?: unknown;
-    parent?: unknown;
-    children: DefaultRequiredField[];
+    children: DefaultTreeData[];
 };
 
-export class TreeNode<T extends DefaultRequiredField = DefaultRequiredField> {
-    public id: string | number;
+interface BaseTreeInterface {
+    root: TreeNode | null;
+    nodeMap: Map<DefaultTreeData['id'], TreeNode>;
+
+    size: number;
+    height: number;
+
+    insert(id: DefaultTreeData['id'], data: DefaultTreeData): void;
+    delete(id: DefaultTreeData['id']): void;
+    find(id: DefaultTreeData['id']): TreeNode | null;
+}
+
+export class TreeNode<T extends DefaultTreeData = DefaultTreeData> {
     public data: T;
+
+    public id: T['id'];
     public parent: TreeNode<T> | null = null;
     public children: TreeNode<T>[] = [];
+    public depth: number;
+    public leaf: boolean;
 
-    constructor(data: T, parent: TreeNode<T> | null) {
+    constructor(data: T, parent: TreeNode<T> | null, depth: number) {
         this.id = data.id;
         this.data = data;
         this.parent = parent ?? null;
+        this.depth = depth;
+        this.leaf = false;
+
         if (parent) {
             parent.children.push(this);
+        }
+        if (!data.children || data.children.length === 0) {
+            this.leaf = true;
         }
     }
 }
 
-export class Tree<T extends DefaultRequiredField = DefaultRequiredField> {
+export class Tree<T extends DefaultTreeData = DefaultTreeData>
+    implements BaseTreeInterface
+{
     public root: TreeNode<T> | null = null;
-    public nodeMap = new Map<DefaultRequiredField['id'], TreeNode<T>>();
+    public nodeMap = new Map<T['id'], TreeNode<T>>();
+    private _chalk: Chalk;
 
     constructor(data: T) {
+        this._chalk = new Chalk();
         if (data) {
             this._init(data);
         }
     }
 
-    // 初始化树
-    _init(data: T) {
-        const nodeMap = this.nodeMap;
+    get size() {
+        return this.nodeMap.size;
+    }
 
-        (function recusive(this: Tree<T>, data: T, parent: TreeNode<T> | null) {
-            // 校验节点id重复
-            if (nodeMap.has(data.id)) {
-                throw new Error(`NodeID Repeat: ${JSON.stringify(data)}`);
+    get height() {
+        const depthArr = [...this.nodeMap.values()].map((node) => node.depth);
+        return Math.max(...depthArr);
+    }
+
+    insert(parentId: T['id'], data: T) {
+        const parentNode = this.nodeMap.get(parentId);
+        if (parentNode) {
+            if (data) {
+                new TreeNode(data, parentNode, parentNode.depth + 1);
+                this._chalk.log('ready', `insert ${JSON.stringify(data)} success !`);
             }
-            // 创建并缓存节点
-            const treeNode = new TreeNode(data, parent);
-            nodeMap.set(data.id, treeNode);
-            // 建立根节点引用
-            if (parent === null) {
-                this.root = treeNode;
+        } else {
+            this._chalk.log(
+                'error',
+                `id ${parentId} not found in the tree, insert failed !`,
+            );
+        }
+    }
+
+    delete(id: T['id']) {
+        const node = this.nodeMap.get(id);
+        if (node) {
+            if (node.parent) {
+                // 非根节点删除
+                const index = node.parent.children.indexOf(node);
+                if (index > -1) {
+                    node.parent.children.splice(index, 1);
+                }
+            } else {
+                // 根节点删除
+                this.root = null;
             }
-            // 递归处理子节点
-            if (Array.isArray(data.children) && data.children.length) {
-                data.children.forEach((child) => {
-                    recusive.call(this, <T>child, treeNode);
-                });
-            }
-        }).call(this, data, null);
+            this.nodeMap.delete(id);
+        }
+    }
+
+    find(id: T['id']): TreeNode<T> | null {
+        return this.nodeMap.get(id) ?? null;
     }
 
     // 深度优先遍历
-    depthFirstTraversal(callback: (node: TreeNode<T>) => true | void) {
+    depthFirstTraversal(callback: (node: TreeNode<T>) => true | void, sort: '') {
         let stopFlag = false;
 
         (function recusive(nodes: TreeNode<T>[] | null) {
             if (stopFlag) return;
-
             if (Array.isArray(nodes) && nodes.length) {
                 for (const node of nodes) {
                     // 避免递归时第一层级节点并发执行
@@ -93,6 +134,26 @@ export class Tree<T extends DefaultRequiredField = DefaultRequiredField> {
                     }
                 }
             }
+        }
+    }
+
+    // 初始化树
+    _init(data: T, parent: TreeNode<T> | null = null, depth = 0) {
+        const nodeMap = this.nodeMap;
+        if (nodeMap.has(data.id)) {
+            this._chalk.log('error', `Repeated id in ${JSON.stringify(data)}`);
+        }
+        const treeNode = new TreeNode(data, parent, depth);
+        nodeMap.set(data.id, treeNode);
+        // 绑定根节点
+        if (!this.root) {
+            this.root = treeNode;
+        }
+        // 递归处理子节点
+        if (Array.isArray(data.children) && data.children.length) {
+            data.children.forEach((child) => {
+                this._init(<T>child, treeNode, depth + 1);
+            });
         }
     }
 }
